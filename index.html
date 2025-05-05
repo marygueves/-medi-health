@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi-Health Hospital | Leading Healthcare in Turkey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D5CDE',
+                        secondary: '#38bdf8',
+                        dark: {
+                            primary: '#181818',
+                            secondary: '#262626'
+                        }
+                    }
+                }
+            }
+        }
+
+        // Check for dark mode preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        
+        // Listen for changes to color scheme preference
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+</head>
+<body class="bg-white dark:bg-dark-primary text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-dark-secondary shadow-md">
+        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center mb-4 md:mb-0">
+                <div class="text-primary dark:text-white text-3xl font-bold mr-2">
+                    <i class="fas fa-hospital"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold text-primary dark:text-white">Medi-Health Hospital</h1>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Istanbul, Turkey</p>
+                </div>
+            </div>
+            <nav class="flex flex-wrap justify-center">
+                <a href="#home" class="px-3 py-2 text-primary dark:text-white hover:text-secondary transition-colors">Home</a>
+                <a href="#about" class="px-3 py-2 text-primary dark:text-white hover:text-secondary transition-colors">About</a>
+                <a href="#services" class="px-3 py-2 text-primary dark:text-white hover:text-secondary transition-colors">Services</a>
+                <a href="#doctors" class="px-3 py-2 text-primary dark:text-white hover:text-secondary transition-colors">Doctors</a>
+                <a href="#contact" class="px-3 py-2 text-primary dark:text-white hover:text-secondary transition-colors">Contact</a>
+                <a href="#appointment" class="ml-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-opacity-90 transition-colors">
+                    Appointment
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-r from-blue-500 to-primary py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">World-Class Healthcare in Turkey</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Providing exceptional medical care with cutting-edge technology and experienced specialists</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#appointment" class="px-6 py-3 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transition-colors">
+                    Make an Appointment
+                </a>
+                <a href="#services" class="px-6 py-3 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-primary transition-colors">
+                    Our Services
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white dark:from-dark-primary to-transparent"></div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white dark:bg-dark-primary">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 rounded-lg bg-blue-50 dark:bg-dark-secondary shadow-sm">
+                    <div class="text-3xl md:text-4xl font-bold text-primary mb-2">50+</div>
+                    <div class="text-gray-600 dark:text-gray-400">Specialist Doctors</div>
+                </div>
+                <div class="p-6 rounded-lg bg-blue-50 dark:bg-dark-secondary shadow-sm">
+                    <div class="text-3xl md:text-4xl font-bold text-primary mb-2">10k+</div>
+                    <div class="text-gray-600 dark:text-gray-400">Satisfied Patients</div>
+                </div>
+                <div class="p-6 rounded-lg bg-blue-50 dark:bg-dark-secondary shadow-sm">
+                    <div class="text-3xl md:text-4xl font-bold text-primary mb-2">15+</div>
+                    <div class="text-gray-600 dark:text-gray-400">Years Experience</div>
+                </div>
+                <div class="p-6 rounded-lg bg-blue-50 dark:bg-dark-secondary shadow-sm">
+                    <div class="text-3xl md:text-4xl font-bold text-primary mb-2">24/7</div>
+                    <div class="text-gray-600 dark:text-gray-400">Emergency Care</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50 dark:bg-dark-secondary">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="aspect-video bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg">
+                        <!-- Placeholder for hospital image -->
+                        <div class="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400">
+                            <i class="fas fa-hospital text-6xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary dark:text-white mb-4">About Medi-Health Hospital</h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        Founded in 2008, Medi-Health Hospital has established itself as one of Turkey's leading healthcare providers. 
+                        Our state-of-the-art facilities in Istanbul combine cutting-edge medical technology with the expertise of 
+                        internationally trained specialists.
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mb-6">
+                        We are committed to delivering personalized care in a compassionate environment, making us a preferred choice for 
+                        both local patients and medical tourists from around the world. Our hospital is accredited by JCI (Joint Commission International) 
+                        and follows the highest standards of medical practice and patient care.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>JCI Accredited</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Modern Equipment</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Multilingual Staff</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Patient-Centered Care</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white dark:bg-dark-primary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary dark:text-white mb-4">Our Medical Services</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    We offer a comprehensive range of medical services designed to meet all your healthcare needs under one roof.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 rounded-lg bg-gray-50 dark:bg-dark-secondary shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Cardiology</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        Comprehensive cardiac care including diagnostics, interventional procedures, and cardiac surgery with state-of-the-art equipment.
+                    </p>
+                    <a href="#" class="text-primary font-medium hover:underline">Learn More →</a>
+                </div>
+                <div class="p-6 rounded-lg bg-gray-50 dark:bg-dark-secondary shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Neurology</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        Expert neurological care for conditions affecting the brain, spine, and nervous system with advanced diagnostic and therapeutic options.
+                    </p>
+                    <a href="#" class="text-primary font-medium hover:underline">Learn More →</a>
+                </div>
+                <div class="p-6 rounded-lg bg-gray-50 dark:bg-dark-secondary shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Orthopedics</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        Specialized care for musculoskeletal issues including joint replacements, sports injuries, and minimally invasive surgeries.
+                    </p>
+                    <a href="#" class="text-primary font-medium hover:underline">Learn More →</a>
+                </div>
+                <div class="p-6 rounded-lg bg-gray-50 dark:bg-dark-secondary shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Obstetrics & Gynecology</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        Complete women's health services including prenatal care, delivery, gynecological procedures, and fertility treatments.
+                    </p>
+                    <a href="#" class="text-primary font-medium hover:underline">Learn More →</a>
+                </div>
+                <div class="p-6 rounded-lg bg-gray-50 dark:bg-dark-secondary shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Dental Care</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        Comprehensive dental services from routine cleanings to advanced cosmetic procedures and oral surgeries.
+                    </p>
+                    <a href="#" class="text-primary font-medium hover:underline">Learn More →</a>
+                </div>
+                <div class="p-6 rounded-lg bg-gray-50 dark:bg-dark-secondary shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ophthalmology</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        Expert care for eye conditions including cataract surgery, LASIK, retinal treatments, and comprehensive eye exams.
+                    </p>
+                    <a href="#" class="text-primary font-medium hover:underline">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-16 bg-gray-50 dark:bg-dark-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary dark:text-white mb-4">Our Medical Team</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Meet our team of experienced specialists dedicated to providing the highest standard of care.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Doctor 1 -->
+                <div class="bg-white dark:bg-dark-primary rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <div class="aspect-[3/4] bg-gray-200 dark:bg-gray-700 relative">
+                        <!-- Placeholder for doctor image -->
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-500 dark:text-gray-400">
+                            <i class="fas fa-user-md text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Dr. Mehmet Yilmaz</h3>
+                        <p class="text-primary font-medium mb-2">Chief of Cardiology</p>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Board certified with over 15 years of experience in interventional cardiology. 
+                            Specializes in complex coronary interventions and structural heart disease.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-primary">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-primary">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Doctor 2 - Dr. Lena Beaty -->
+                <div class="bg-white dark:bg-dark-primary rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <div class="aspect-[3/4] bg-gray-200 dark:bg-gray-700 relative">
+                        <!-- Placeholder for doctor image - Replace with actual image when implementing -->
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-500 dark:text-gray-400">
+                            <i class="fas fa-user-md text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Dr. LENA BEATY</h3>
+                        <p class="text-primary font-medium mb-2">Neurosurgeon & Dermatologist</p>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Dual specialist in neurosurgery and dermatology with extensive experience in both fields.
+                            Former consultant at the William Beaumont School of Medicine, Oakland University, United States.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-primary">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-primary">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Doctor 3 -->
+                <div class="bg-white dark:bg-dark-primary rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <div class="aspect-[3/4] bg-gray-200 dark:bg-gray-700 relative">
+                        <!-- Placeholder for doctor image -->
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-500 dark:text-gray-400">
+                            <i class="fas fa-user-md text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Dr. Ali Demir</h3>
+                        <p class="text-primary font-medium mb-2">Orthopedic Surgeon</p>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Specializes in joint replacement and sports medicine with over 20 years of experience.
+                            Pioneer in robotic-assisted orthopedic surgeries.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-primary">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-primary">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="#" class="inline-block px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-opacity-90 transition-colors">
+                    View All Doctors
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white dark:bg-dark-primary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary dark:text-white mb-4">Patient Testimonials</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Read what our patients have to say about their experience at Medi-Health Hospital.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-8 bg-gray-50 dark:bg-dark-secondary rounded-lg shadow-md">
+                    <div class="text-primary text-2xl mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 mb-6">
+                        "I came from Germany for my heart surgery at Medi-Health Hospital. The care I received was exceptional, 
+                        from the initial consultation to post-operative care. Dr. Yilmaz and his team were professional, 
+                        compassionate, and thorough. I'm grateful for their expertise and attention."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Schmidt</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Cardiac Patient</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 bg-gray-50 dark:bg-dark-secondary rounded-lg shadow-md">
+                    <div class="text-primary text-2xl mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 mb-6">
+                        "After researching medical tourism options for my knee replacement, I chose Medi-Health Hospital in Istanbul.
+                        The quality of care was outstanding, and the cost was significantly lower than in the UK. The staff spoke 
+                        excellent English, and my recovery was smooth. I highly recommend their orthopedic department."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Orthopedic Patient</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="py-16 bg-primary">
+        <div class="container mx-auto px-4">
+            <div class="bg-white dark:bg-dark-secondary rounded-lg shadow-xl overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-8 md:p-12">
+                        <h2 class="text-2xl md:text-3xl font-bold text-primary dark:text-white mb-4">Book an Appointment</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">
+                            Fill out the form and our team will get back to you within 24 hours to confirm your appointment.
+                        </p>
+                        <form class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="firstName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">First Name</label>
+                                    <input type="text" id="firstName" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-primary text-base focus:outline-none focus:ring-2 focus:ring-primary dark:text-white" required>
+                                </div>
+                                <div>
+                                    <label for="lastName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Last Name</label>
+                                    <input type="text" id="lastName" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-primary text-base focus:outline-none focus:ring-2 focus:ring-primary dark:text-white" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-primary text-base focus:outline-none focus:ring-2 focus:ring-primary dark:text-white" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-primary text-base focus:outline-none focus:ring-2 focus:ring-primary dark:text-white" required>
+                            </div>
+                            <div>
+                                <label for="department" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Department</label>
+                                <select id="department" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-primary text-base focus:outline-none focus:ring-2 focus:ring-primary dark:text-white" required>
+                                    <option value="">Select Department</option>
+                                    <option value="cardiology">Cardiology</option>
+                                    <option value="neurology">Neurology</option>
+                                    <option value="orthopedics">Orthopedics</option>
+                                    <option value="gynecology">Obstetrics & Gynecology</option>
+                                    <option value="dental">Dental Care</option>
+                                    <option value="ophthalmology">Ophthalmology</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="date" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Preferred Date</label>
+                                <input type="date" id="date" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-primary text-base focus:outline-none focus:ring-2 focus:ring-primary dark:text-white" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Additional Information</label>
+                                <textarea id="message" rows="3" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-primary text-base focus:outline-none focus:ring-2 focus:ring-primary dark:text-white"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-opacity-90 transition-colors">
+                                    Request Appointment
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="bg-blue-100 dark:bg-gray-800 p-8 md:p-12 flex flex-col justify-center">
+                        <h3 class="text-xl font-bold text-primary dark:text-white mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-primary text-xl mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Address</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        Medi-Health Hospital<br>
+                                        123 Sağlık Street<br>
+                                        Beşiktaş, Istanbul 34353<br>
+                                        Turkey
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-primary text-xl mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Phone</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        International: +90 212 123 4567<br>
+                                        Local: 0212 123 4567<br>
+                                        Emergency: 0212 123 4500
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-primary text-xl mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Email</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        info@medihealth-hospital.com<br>
+                                        appointments@medihealth-hospital.com<br>
+                                        international@medihealth-hospital.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">Working Hours</h4>
+                                <p class="text-gray-600 dark:text-gray-400">
+                                    Monday - Friday: 8:00 AM - 8:00 PM<br>
+                                    Saturday: 9:00 AM - 5:00 PM<br>
+                                    Sunday: 10:00 AM - 4:00 PM<br>
+                                    Emergency Services: 24/7
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Map Section -->
+    <section id="contact" class="py-16 bg-gray-50 dark:bg-dark-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary dark:text-white mb-4">Find Us</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Conveniently located in the heart of Istanbul, our hospital is easily accessible by public transportation.
+                </p>
+            </div>
+            <div class="bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden h-96 shadow-md">
+                <!-- Map placeholder - In a real implementation, you would integrate Google Maps here -->
+                <div class="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400">
+                    <div class="text-center">
+                        <i class="fas fa-map-marked-alt text-6xl mb-4"></i>
+                        <p>Interactive map would be displayed here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="text-white text-3xl font-bold mr-2">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Medi-Health Hospital</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Providing world-class healthcare services with compassion and excellence since 2008.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-primary">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#doctors" class="text-gray-400 hover:text-white">Doctors</a></li>
+                        <li><a href="#appointment" class="text-gray-400 hover:text-white">Appointments</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cardiology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Neurology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Orthopedics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Obstetrics & Gynecology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Dental Care</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ophthalmology</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">
+                        Subscribe to our newsletter for the latest news and health tips.
+                    </p>
+                    <form class="space-y-2">
+                        <div>
+                            <input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-700 text-white text-base focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full px-4 py-2 bg-primary text-white font-medium rounded-lg hover:bg-opacity-90 transition-colors">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Medi-Health Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form validation and submission handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('#appointment form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Simple validation
+                    let valid = true;
+                    const requiredFields = form.querySelectorAll('[required]');
+                    
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            valid = false;
+                            field.classList.add('border-red-500');
+                        } else {
+                            field.classList.remove('border-red-500');
+                        }
+                    });
+                    
+                    if (valid) {
+                        // In a real application, you would send the form data to a server
+                        // For this demo, just show a success message
+                        form.innerHTML = `
+                            <div class="p-6 bg-green-100 dark:bg-green-900 rounded-lg text-center">
+                                <div class="text-green-600 dark:text-green-400 text-5xl mb-4">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-green-800 dark:text-green-300 mb-2">Appointment Request Received</h3>
+                                <p class="text-green-700 dark:text-green-400">
+                                    Thank you for your request. Our team will contact you within 24 hours to confirm your appointment.
+                                </p>
+                            </div>
+                        `;
+                    }
+                });
+            }
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Offset for the sticky header
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
